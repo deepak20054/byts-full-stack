@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="D:\learn\task\task1\download.png" />
+    <title>add</title>
+  </head>
+  <style>
+    .watch {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aqua;
+      background-image: url(https://media.istockphoto.com/id/494094990/vector/figures-3d-seamless-wallpaper-pattern.jpg?s=612x612&w=0&k=20&c=q8qUEG3rkGMDR0kZ4kRf577W6V3iqlvTtPvyvzXb23g=);
+      background-size:auto;
+    }
+    /* .ans{
+        background: none;
+    } */
+    fieldset {
+      background-color: rgba(250, 235, 215, 0.466);
+      background-size: cover;
+      font-size: x-large;
+      box-shadow: 10px 10px 5px;
+    }
+    .add {
+      color: rgb(0, 0, 0);
+      padding-left: 20px;
+      padding-right: 15px;
+    }
+    #res {
+      color: rgba(84, 3, 247, 0.796);
+    }
+  </style>
+  <body>
+    <div class="watch">
+      <!-- <center> -->
+      <fieldset>
+        <h1>Addition</h1>
+        <label for="num1">Number1</label><br />
+        <input type="number" name="num1" id="num1" /><br />
+        <label for="num2">Number2</label><br />
+        <input type="number" name="num2" id="num2" /><br />
+        <button class="add" onclick="addnum()">Add</button>
+        <button onclick="window.location.reload();">🔄️</button>
+        <p id="res"></p>
+      </fieldset>
+    </div>
+
+    <!-- </center> -->
+
+    <script>
+      function addnum() {
+        const n1 = parseFloat(document.getElementById("num1").value);
+        const n2 = parseFloat(document.getElementById("num2").value);
+        const sum = n1 + n2;
+        document.getElementById("res").innerText = "Addition " + sum;
+      }
+    </script>
+  </body>
+</html>
